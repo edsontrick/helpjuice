@@ -21,3 +21,5 @@ gem 'listen'
 gem 'mongoid'
 
 gem 'sidekiq'
+
+gem 'rspec-rails'

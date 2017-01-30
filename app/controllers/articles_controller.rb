@@ -5,10 +5,8 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    search = params[:search]
-    knowledge_base = KnowledgeBase.new
-    knowledge_base.query = search
-    knowledge_base.save
+    KnowledgeBase.create!(:query => params[:search_field])
+    redirect_to root_path
   end
 
 end

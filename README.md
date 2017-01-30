@@ -1,27 +1,12 @@
-# README
+# Project made for a test in HelpJuice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Classes
+Articles: a class that represents all the actions related to articles
+KnowledgeBase: a class that represents the actions around the Knowledge Base of this admin prototype
 
-Things you may want to cover:
+## Controllers
+ArticlesController
+KnowledgebasesController
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-# helpjuice
-Project to test my skills
+## Tests
+to run the test, please, run `<addr>` bundle exec rspec

@@ -5,7 +5,7 @@
       <div class="col s12 m6 offset-m3">
         <div class="card-panel center-align">
           <input id="token" name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-          <input placeholder="Search here" id="search_field" type="text" class="validate col l9 m12">
+          <input placeholder="Search here" name="search_field" id="search_field" type="text" class="validate col l9 m12" required>
           <button type="submit" class="waves-effect waves-light btn light-blue lighten-2">go!</button>
         </div>
       </div>
@@ -13,20 +13,27 @@
   </form>
 </div>
 
+<div class="row center-align">
+  <a href="/knowledgebase/clear" class="waves-effect waves-light btn red lighten-2">Clear all data</a>
+</div>
 
 <div class="row">
 
   <table class="col l6 offset-l3">
     <thead>
       <tr>
-        <th data-field="query">Query</th>
+        <th>Query</th>
+        <th>Times that appeared</th>
+        <th>#</th>
       </tr>
     </thead>
 
     <tbody>
       <% @knowledge_base.each do |k| %>
       <tr>
-        <td><%= k %></td>
+        <td><%= k.first[0] %></td>
+        <td><%= k.first[1] %></td>
+        <td><a class="waves-effect waves-light btn red lighten-2" href="/knowledgebase/<%= k.first[0] %>/clear">Delete</a></td>
       </tr>
       <% end %>
     </tbody>
