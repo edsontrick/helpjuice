@@ -1,0 +1,35 @@
+<div class="row">
+  <h1 class="center-align">HelpJuice Articles Search</h1>
+  <form action="/articles/search" method="post" id="search">
+    <div class="input-field">
+      <div class="col s12 m6 offset-m3">
+        <div class="card-panel center-align">
+          <input id="token" name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+          <input placeholder="Search here" id="search_field" type="text" class="validate col l9 m12">
+          <button type="submit" class="waves-effect waves-light btn light-blue lighten-2">go!</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+
+  <table class="col l6 offset-l3">
+    <thead>
+      <tr>
+        <th data-field="query">Query</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @knowledge_base.each do |k| %>
+      <tr>
+        <td><%= k %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
