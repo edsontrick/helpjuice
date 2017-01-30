@@ -9,4 +9,4 @@ ArticlesController
 KnowledgebasesController
 
 ## Tests
-to run the test, please, run < bundle exec rspec >
+to run the test, please, run ```ruby bundle exec rspec ```
