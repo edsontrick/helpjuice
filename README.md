@@ -8,5 +8,18 @@ KnowledgeBase: a class that represents the actions around the Knowledge Base of 
 ArticlesController
 KnowledgebasesController
 
-## Tests
-to run the test, please, run ```ruby bundle exec rspec ```
+## How the platform works?
+Well, the platform doesn't search real articles at all, it just saves the query typed in a Knowledge Base database. To make a better query Knowledge Base, the platform only saves the query before 1 second without typing.
+
+In the first page all things happens, it has:
+* the search field.
+* the list of query with respective times that was searched.
+* a button that clears the Knowledge Base database.
+
+## Hmm, nice. Where are the tests?
+to run the test, please, run ``` bundle exec rspec ```
+
+When executed, all tests run automatically.
+
+We have two simple tests:
+* To stress the application, 10 thousands KnowledgeBases objects are created (but they are not commited to database) with and without Sidekiq
