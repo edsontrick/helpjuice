@@ -1,5 +1,11 @@
 # Project made for a test in HelpJuice
 
+## Dependencies
+* Ruby 2.2.2
+* A mongo database running (please, edit the config/mongoid.yml to your database configuration, but don't modify production configurations).
+* Redis
+* Sidekiq
+
 ## Classes
 * Articles: a class that represents all the actions related to articles
 * KnowledgeBase: a class that represents the actions around the Knowledge Base of this admin prototype
